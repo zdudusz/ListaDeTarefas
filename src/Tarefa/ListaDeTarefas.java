@@ -45,4 +45,9 @@ public class ListaDeTarefas {
     public void alterarDataFinal(int a){
         this.dataFinal = this.dataInicio.plusDays(a);
     }
+    public static void mostrarTarefas(ArrayList tarefas){
+        for (int i = 0; i < tarefas.size(); i++) {
+            System.out.println(tarefas.get(i));
+        }
+    }
 }

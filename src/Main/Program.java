@@ -54,11 +54,7 @@ public class Program {
                     tarefaEncontrada.alterarDataFinal(a);
                 }
             } else if (opcaoUsuarioMenu.equals("4")) {
-                //esse loop vai percorrer por todo ArrayList de objetos tarefa TRANSFORMAR EM ESTATICO JAJA
-                for (int i = 0; i < tarefas.size(); i++) {
-                    System.out.println(tarefas.get(i));
-                }
-
+                ListaDeTarefas.mostrarTarefas(tarefas);
             } else if (opcaoUsuarioMenu.equals("5")) {
                 break;
             } else {
