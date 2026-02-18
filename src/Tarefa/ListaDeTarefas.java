@@ -12,9 +12,9 @@ public class ListaDeTarefas {
     private String tarefa;
 
 
-    public ListaDeTarefas(String _tarefa,LocalDateTime _dataFinal){
+    public ListaDeTarefas(String _tarefa,int _diasParaFazer){
         this.tarefa = _tarefa;
-        this.dataFinal = _dataFinal;
+        this.dataFinal = dataInicio.plusDays(_diasParaFazer);
     }
 
     @Override

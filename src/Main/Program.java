@@ -1,6 +1,10 @@
 package Main;
 
+import Tarefa.ListaDeTarefas;
+
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Program {
@@ -34,6 +38,7 @@ public class Program {
                     System.out.println(tarefas.get(i));
                 }
 
+            }
             else if(opcaoUsuarioMenu.equals("5")){
                 break;
             }
