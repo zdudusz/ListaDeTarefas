@@ -15,8 +15,15 @@ public class Program {
         while(true){
             System.out.println("O que você deseja fazer: \n 1-ADICIONAR TAREFA \n 2-REMOVER TAREFA \n 3-ALTERAR TAREFA \n 4-LISTAR TAREFAS \n 5-SAIR");
             String opcaoUsuarioMenu = input.nextLine();
-            if(opcaoUsuarioMenu.equals("1")){}
-
+            if(opcaoUsuarioMenu.equals("1")){
+                System.out.println("Digite a tarefa| ");
+                String tarefaAtual = input.nextLine();
+                System.out.println("Quantos dias de limite para tarefa| ");
+                int diasParaFazer = input.nextInt();
+                input.nextLine();
+                tarefa = new ListaDeTarefas(tarefaAtual,diasParaFazer);
+                tarefas.add(tarefa);
+            }
             else if(opcaoUsuarioMenu.equals("2")){}
 
             else if(opcaoUsuarioMenu.equals("3")){}
