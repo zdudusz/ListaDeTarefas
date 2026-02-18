@@ -5,6 +5,9 @@ import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args){
+        // Criando arrayList para armazenar os objetos (tarefas)
+        ArrayList<ListaDeTarefas> tarefas = new ArrayList<ListaDeTarefas>();
+        ListaDeTarefas tarefa = null;
         Scanner input = new Scanner(System.in);
         // metódo para chamar a data de hoje
         LocalDateTime diaAtual = LocalDateTime.now();
