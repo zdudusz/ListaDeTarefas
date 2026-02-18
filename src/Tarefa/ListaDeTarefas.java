@@ -1,11 +1,9 @@
 package Tarefa;
 
-import javax.xml.crypto.Data;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class ListaDeTarefas {
     // Contador para auto increment do ID
@@ -15,7 +13,7 @@ public class ListaDeTarefas {
     private LocalDateTime dataFinal;
     private String tarefa;
 
-
+    DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     public ListaDeTarefas(String _tarefa,int _diasParaFazer){
         this.id = contador;
         contador++;
@@ -25,7 +23,7 @@ public class ListaDeTarefas {
 
     @Override
     public String toString() {
-        return "-".repeat(50)+ "\n Tarefa Numero "+ id +"\nData de Inicio: " + dataInicio + "\n Tarefa :" +tarefa + "\n Data Final: " + dataFinal + "\n".repeat(2);
+        return "-".repeat(50)+ "\n Tarefa Numero "+ id +"\nData de Inicio: " + dataInicio.format(fmt) + "\n Tarefa :" +tarefa + "\n Data Final: " + dataFinal.format(fmt) + "\n".repeat(2);
     }
     public Integer getId(){
         return this.id;

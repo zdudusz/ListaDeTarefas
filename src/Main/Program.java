@@ -48,6 +48,10 @@ public class Program {
                     ListaDeTarefas tarefaEncontrada = ListaDeTarefas.acharTarefaPorId(tarefas.size(),idUpdate,tarefas);
                     String novaTarefa = input.nextLine();
                     tarefaEncontrada.alteraTarefa(novaTarefa);
+                } else if (opcaoUsuarioUpdate.equals("2")) {
+                    ListaDeTarefas tarefaEncontrada = ListaDeTarefas.acharTarefaPorId(tarefas.size(),idUpdate,tarefas);
+                    int a = input.nextInt();
+                    tarefaEncontrada.alterarDataFinal(a);
                 }
             } else if (opcaoUsuarioMenu.equals("4")) {
                 //esse loop vai percorrer por todo ArrayList de objetos tarefa TRANSFORMAR EM ESTATICO JAJA
