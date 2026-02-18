@@ -28,7 +28,11 @@ public class Program {
 
             else if(opcaoUsuarioMenu.equals("3")){}
 
-            else if(opcaoUsuarioMenu.equals("4")){}
+            else if(opcaoUsuarioMenu.equals("4")){
+                //esse loop vai percorrer por todo ArrayList de objetos tarefa
+                for (int i = 0; i < tarefas.size(); i++) {
+                    System.out.println(tarefas.get(i));
+                }
 
             else if(opcaoUsuarioMenu.equals("5")){
                 break;
