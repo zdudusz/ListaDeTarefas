@@ -29,4 +29,18 @@ public class ListaDeTarefas {
     public int getId(){
         return this.id;
     }
+
+    public void alteraTarefa(String novaTarefa){
+        this.tarefa = novaTarefa;
+    }
+    public static ListaDeTarefas acharTarefaPorId(int tarefasTamanho, int idUpdate, ArrayList<ListaDeTarefas> tarefas) {
+        for (int i = 0; i < tarefasTamanho; i++) {
+            ListaDeTarefas list = tarefas.get(i);
+            int idPego = list.getId();
+            if (idUpdate == idPego) {
+                return list;
+            }
+        }
+        return null;
+    }
 }
