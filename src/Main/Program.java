@@ -29,7 +29,9 @@ public class Program {
                 tarefas.add(tarefa);
             }
             else if(opcaoUsuarioMenu.equals("2")){
-
+                System.out.println("ID da tarefa para remover: ");
+                int idRemovido = input.nextInt();
+                tarefas.removeIf(t -> t.getId() == idRemovido);
             }
 
             else if(opcaoUsuarioMenu.equals("3")){}

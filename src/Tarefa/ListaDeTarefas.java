@@ -7,6 +7,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class ListaDeTarefas {
+    // Contador para auto increment do ID
     private static int contador = 1;
     private int id;
     private LocalDateTime dataInicio = LocalDateTime.now();
@@ -24,5 +25,8 @@ public class ListaDeTarefas {
     @Override
     public String toString() {
         return "-".repeat(50)+ "\n Tarefa Numero "+ id +"\nData de Inicio: " + dataInicio + "\n Tarefa :" +tarefa + "\n Data Final: " + dataFinal + "\n".repeat(2);
+    }
+    public int getId(){
+        return this.id;
     }
 }
