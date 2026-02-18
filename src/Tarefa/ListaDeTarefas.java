@@ -4,12 +4,13 @@ import javax.xml.crypto.Data;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ListaDeTarefas {
     // Contador para auto increment do ID
     private static int contador = 1;
-    private int id;
+    private Integer id;
     private LocalDateTime dataInicio = LocalDateTime.now();
     private LocalDateTime dataFinal;
     private String tarefa;
@@ -26,7 +27,7 @@ public class ListaDeTarefas {
     public String toString() {
         return "-".repeat(50)+ "\n Tarefa Numero "+ id +"\nData de Inicio: " + dataInicio + "\n Tarefa :" +tarefa + "\n Data Final: " + dataFinal + "\n".repeat(2);
     }
-    public int getId(){
+    public Integer getId(){
         return this.id;
     }
 
@@ -42,5 +43,8 @@ public class ListaDeTarefas {
             }
         }
         return null;
+    }
+    public void alterarDataFinal(int a){
+        this.dataFinal = this.dataInicio.plusDays(a);
     }
 }
