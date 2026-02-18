@@ -28,7 +28,9 @@ public class Program {
                 tarefa = new ListaDeTarefas(tarefaAtual,diasParaFazer);
                 tarefas.add(tarefa);
             }
-            else if(opcaoUsuarioMenu.equals("2")){}
+            else if(opcaoUsuarioMenu.equals("2")){
+
+            }
 
             else if(opcaoUsuarioMenu.equals("3")){}
 

@@ -7,18 +7,22 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class ListaDeTarefas {
+    private static int contador = 1;
+    private int id;
     private LocalDateTime dataInicio = LocalDateTime.now();
     private LocalDateTime dataFinal;
     private String tarefa;
 
 
     public ListaDeTarefas(String _tarefa,int _diasParaFazer){
+        this.id = contador;
+        contador++;
         this.tarefa = _tarefa;
         this.dataFinal = dataInicio.plusDays(_diasParaFazer);
     }
 
     @Override
     public String toString() {
-        return "-".repeat(50)+ "\nData de Inicio: " + dataInicio + "\n Tarefa :" +tarefa + "\n Data Final: " + dataFinal + "\n".repeat(2);
+        return "-".repeat(50)+ "\n Tarefa Numero "+ id +"\nData de Inicio: " + dataInicio + "\n Tarefa :" +tarefa + "\n Data Final: " + dataFinal + "\n".repeat(2);
     }
 }
