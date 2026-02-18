@@ -32,8 +32,9 @@ public class Program {
                 System.out.println("ID da tarefa para remover: ");
                 int idRemovido = input.nextInt();
                 boolean removido = tarefas.removeIf(t -> t.getId() == idRemovido);
-                if(removido){System.out.println("Tarefa encontrada e removida! ");}
-                else{System.out.println("Tarefa não encontrada! ");}
+                input.nextLine();
+                if(removido){System.out.println("\nTarefa encontrada e removida! \n");}
+                else{System.out.println("\nTarefa não encontrada! \n");}
             }
 
             else if(opcaoUsuarioMenu.equals("3")){}
