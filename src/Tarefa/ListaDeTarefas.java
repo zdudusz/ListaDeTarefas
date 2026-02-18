@@ -17,5 +17,8 @@ public class ListaDeTarefas {
         this.dataFinal = _dataFinal;
     }
 
-
+    @Override
+    public String toString() {
+        return "-".repeat(50)+ "\nData de Inicio: " + dataInicio + "\n Tarefa :" +tarefa + "\n Data Final: " + dataFinal + "\n".repeat(2);
+    }
 }
